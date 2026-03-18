@@ -59,11 +59,16 @@ secret = true
 secret_character = "*"
 
 [node name="hintintintin" type="Label" parent="."]
-layout_mode = 0
-offset_left = 526.0
-offset_top = 145.0
-offset_right = 1116.0
-offset_bottom = 168.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45700002
+anchor_top = 0.224
+anchor_right = 0.96900004
+anchor_bottom = 0.259
+offset_left = -0.46398926
+offset_top = -0.15200806
+offset_right = -0.28808594
+offset_bottom = 0.16799927
 theme = SubResource("Theme_juwbm")
 text = "(hint: the password is 'qwertyuiop' for now because the game is in development.)"
 

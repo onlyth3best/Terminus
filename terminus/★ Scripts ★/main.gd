@@ -25,3 +25,14 @@ func _input(event):
 	
 	if Input.is_action_just_pressed("Left_Mouse"):
 		$mouse.play()
+
+
+
+#pdfs
+
+
+func _on_about_pressed() -> void:
+	$about.visible = false
+
+func _on_settings_pressed() -> void:
+	pass # Replace with function body.

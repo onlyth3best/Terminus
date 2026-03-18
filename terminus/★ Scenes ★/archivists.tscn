@@ -1,9 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://dwm3r8hjrglgc"]
+[gd_scene load_steps=15 format=3 uid="uid://dwm3r8hjrglgc"]
 
 [ext_resource type="FontFile" uid="uid://cu3ebes5jtte8" path="res://★ Files ★/★ Fonts ★/easvhs.ttf" id="1_f6m1q"]
 [ext_resource type="Script" uid="uid://cpn114rvlgdrc" path="res://★ Scripts ★/archivists.gd" id="2_wiuo1"]
 [ext_resource type="Script" uid="uid://2j5exdcsfj65" path="res://★ Scripts ★/scroller-archivists.gd" id="3_6jke2"]
+[ext_resource type="FontFile" uid="uid://c4ynedw1ou0bf" path="res://★ Files ★/★ Fonts ★/pixelated-times-new-roman.otf" id="3_iflcl"]
 [ext_resource type="FontFile" uid="uid://do7mkrl08rpkc" path="res://★ Files ★/★ Fonts ★/dogicabold.ttf" id="3_vxvfh"]
+[ext_resource type="Texture2D" uid="uid://clpdxxarbo8gb" path="res://★ Files ★/★ Images ★/escape.png" id="4_if45d"]
 
 [sub_resource type="Theme" id="Theme_wiuo1"]
 default_font = ExtResource("1_f6m1q")
@@ -18,6 +20,9 @@ bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_6jke2"]
 color = Color(0.33333334, 0, 0, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_if45d"]
+load_path = "res://.godot/imported/escapeun.png-ff9a8947ff7f592d9235d9bf041a953b.ctex"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iflcl"]
 bg_color = Color(0, 0, 0, 1)
@@ -66,17 +71,45 @@ theme_override_styles/separator = SubResource("StyleBoxLine_6jke2")
 [node name="aboutlabel" type="Label" parent="Panel/MarginContainer/HBoxContainer/about"]
 custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_iflcl")
+theme_override_font_sizes/font_size = 35
 text = "ABOUT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="aboutcontent" type="Label" parent="Panel/MarginContainer/HBoxContainer/about"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer/HBoxContainer/about"]
+custom_minimum_size = Vector2(100, 205)
 layout_mode = 2
-theme_override_font_sizes/font_size = 13
-text = "sdssd"
 
-[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/HBoxContainer/about"]
+[node name="aboutcontent" type="RichTextLabel" parent="Panel/MarginContainer/HBoxContainer/about/ScrollContainer"]
+custom_minimum_size = Vector2(170, 205)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("3_iflcl")
+theme_override_fonts/bold_font = ExtResource("3_iflcl")
+theme_override_font_sizes/normal_font_size = 23
+text = "The ARCHIVISTS is a cohort of rather eccentric mmemory bargainers. We aren't supposed to tell you their names, how many there are, or any sort of information really-- though we can tell you that we're unimaginably glad you're here!
+
+How does this work, you ask?
+Well, let us explain! You tell the ARCHIVISTS of something you would like to forget… failed birthday parties, ignorant families, fake friends… and we'll make sure all information of that encounter is completelyy purged off the Internet!
+That's right, just for the small price of a few bytes of data, we'll solve all your problems. Isn't that amazing?
+
+Well, what's the bargaining?
+You see, the price of our services relies largelly on how important this memory is, and how heavy its digital footprint is. Since there is more than one ARCHIVIST, all of them shall offer different prices for the service, sometimes with a little tweaks and changes depending on the specific situation.
+
+AAny questions? Just let us know!"
+autowrap_mode = 2
+
+[node name="escape" type="TextureButton" parent="Panel/MarginContainer/HBoxContainer/about"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = SubResource("CompressedTexture2D_if45d")
+texture_pressed = ExtResource("4_if45d")
+texture_hover = ExtResource("4_if45d")
+stretch_mode = 5
 
 [node name="bargains" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -90,9 +123,14 @@ theme_override_styles/separator = SubResource("StyleBoxLine_6jke2")
 [node name="bargainlabel" type="Label" parent="Panel/MarginContainer/HBoxContainer/bargains"]
 custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_iflcl")
+theme_override_font_sizes/font_size = 35
 text = "BARGAINS"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/HBoxContainer/bargains"]
+layout_mode = 2
 
 [node name="memories" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -111,6 +149,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="login" type="Panel" parent="."]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -275,3 +314,4 @@ layout_mode = 2
 placeholder_text = "PASSWORD"
 
 [connection signal="close_requested" from="." to="." method="_on_archivists_close_requested"]
+[connection signal="pressed" from="Panel/MarginContainer/HBoxContainer/about/escape" to="." method="_on_escape_pressed"]

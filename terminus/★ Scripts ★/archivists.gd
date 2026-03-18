@@ -29,3 +29,7 @@ func _on_archivists_close_requested() -> void:
 
 func _on_archivistsicon_pressed() -> void:
 	visible = true
+
+
+func _on_escape_pressed() -> void:
+	self.hide()

@@ -136,31 +136,31 @@ expand_mode = 2
 
 [node name="notes-icon" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 60.0
-offset_top = 59.0
-offset_right = 228.0
-offset_bottom = 227.0
-scale = Vector2(0.7, 0.7)
+offset_left = 94.0
+offset_top = 65.0
+offset_right = 262.0
+offset_bottom = 233.0
+scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("3_xtgqh")
 texture_hover = ExtResource("4_xmn2q")
 
 [node name="terminal-icon" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 62.0
-offset_top = 188.0
-offset_right = 230.0
-offset_bottom = 356.0
-scale = Vector2(0.7, 0.7)
+offset_left = 97.0
+offset_top = 179.0
+offset_right = 265.0
+offset_bottom = 347.0
+scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("7_f6x6g")
 texture_hover = ExtResource("8_tnhrd")
 
 [node name="messages-icon" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 62.0
-offset_top = 314.0
-offset_right = 230.0
-offset_bottom = 482.0
-scale = Vector2(0.7, 0.7)
+offset_left = 96.0
+offset_top = 293.0
+offset_right = 264.0
+offset_bottom = 461.0
+scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("9_713c3")
 texture_hover = ExtResource("10_j3xoj")
 
@@ -170,7 +170,7 @@ offset_left = 984.0
 offset_top = 48.999996
 offset_right = 1152.0
 offset_bottom = 217.0
-scale = Vector2(0.7, 0.7)
+scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("14_dfaut")
 texture_hover = ExtResource("15_dfaut")
 
@@ -285,12 +285,17 @@ libraries = {
 }
 
 [node name="about" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 127.0
-offset_top = 472.0
-offset_right = 229.0
-offset_bottom = 601.0
-scale = Vector2(0.68, 0.68)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11000001
+anchor_top = 0.72800004
+anchor_right = 0.17
+anchor_bottom = 0.864
+offset_left = 0.27999115
+offset_top = 0.25598145
+offset_right = 33.160004
+offset_bottom = 41.12799
+scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("23_2k72w")
 texture_pressed = ExtResource("24_d3mpj")
 
@@ -300,7 +305,7 @@ offset_left = 224.00002
 offset_top = 408.0
 offset_right = 326.0
 offset_bottom = 537.0
-scale = Vector2(0.68, 0.68)
+scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("25_gqlmo")
 texture_pressed = ExtResource("26_xith2")
 
@@ -308,3 +313,5 @@ texture_pressed = ExtResource("26_xith2")
 [connection signal="pressed" from="terminal-icon" to="Terminal" method="_on_TERMINAL_pressed"]
 [connection signal="pressed" from="messages-icon" to="Messages" method="_on_messagesicon_pressed"]
 [connection signal="pressed" from="archivists-icon" to="Archivists" method="_on_archivistsicon_pressed"]
+[connection signal="pressed" from="about" to="." method="_on_about_pressed"]
+[connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
