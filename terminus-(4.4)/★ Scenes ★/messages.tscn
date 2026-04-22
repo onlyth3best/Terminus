@@ -1,0 +1,433 @@
+[gd_scene load_steps=21 format=3 uid="uid://vtuwavjaku7o"]
+
+[ext_resource type="FontFile" uid="uid://cu3ebes5jtte8" path="res://★ Files ★/★ Fonts ★/easvhs.ttf" id="1_3ryei"]
+[ext_resource type="Script" uid="uid://2h0tyg2r8h1a" path="res://★ Scripts ★/messages.gd" id="2_ge0cd"]
+[ext_resource type="Texture2D" uid="uid://beyg6x6tn7j00" path="res://★ Files ★/★ Images ★/shiba-star.png" id="3_ge0cd"]
+[ext_resource type="FontFile" uid="uid://dfbtv28p3cspu" path="res://★ Files ★/★ Fonts ★/EpilepsySans.ttf" id="4_wrgkd"]
+[ext_resource type="Texture2D" uid="uid://chsa7lx4f87ih" path="res://★ Files ★/★ Images ★/palu-pfp.png" id="5_rlxar"]
+[ext_resource type="Texture2D" uid="uid://fqcuuj1p1vfx" path="res://★ Files ★/★ Images ★/lio.png" id="6_86b7h"]
+[ext_resource type="Texture2D" uid="uid://t3x44obfm27i" path="res://★ Files ★/★ Images ★/eyeone.png" id="7_1yhso"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wrgkd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rlxar"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrgkd"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_rlxar"]
+default_font = ExtResource("1_3ryei")
+default_font_size = 17
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_wrgkd"]
+color = Color(0.65841234, 0.772297, 0.7067778, 1)
+
+[sub_resource type="Theme" id="Theme_86b7h"]
+default_font = ExtResource("1_3ryei")
+default_font_size = 20
+
+[sub_resource type="Theme" id="Theme_wrgkd"]
+default_font = ExtResource("1_3ryei")
+default_font_size = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rlxar"]
+bg_color = Color(0.17730999, 0.28945515, 0.122048326, 1)
+
+[sub_resource type="Theme" id="Theme_1yhso"]
+default_font = ExtResource("1_3ryei")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uxr7d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_86b7h"]
+bg_color = Color(0.27058825, 0.4117647, 0.22745098, 0.4862745)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y8gak"]
+bg_color = Color(0.23759669, 0.41664186, 0.16602564, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_86b7h"]
+
+[node name="messages" type="Window"]
+oversampling_override = 1.0
+title = "MESSAGES"
+initial_position = 1
+size = Vector2i(540, 410)
+theme_override_fonts/title_font = ExtResource("1_3ryei")
+theme_override_font_sizes/title_font_size = 20
+theme_override_styles/embedded_border = SubResource("StyleBoxEmpty_wrgkd")
+theme_override_styles/embedded_unfocused_border = SubResource("StyleBoxEmpty_rlxar")
+script = ExtResource("2_ge0cd")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_wrgkd")
+
+[node name="VBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 540.0
+offset_bottom = 410.0
+
+[node name="MarginContainer2" type="MarginContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(13, 0)
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+
+[node name="contact_list" type="VBoxContainer" parent="Panel/VBoxContainer/ScrollContainer"]
+custom_minimum_size = Vector2(165, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer/ScrollContainer/contact_list"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Contact1" type="Button" parent="Panel/VBoxContainer/ScrollContainer/contact_list"]
+custom_minimum_size = Vector2(165, 70)
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact1"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 0
+offset_right = 168.0
+offset_bottom = 61.0
+theme_override_constants/separation = 2
+
+[node name="hbox" type="HBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact1/vbox"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="pfp" type="TextureRect" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact1/vbox/hbox"]
+layout_mode = 2
+texture = ExtResource("3_ge0cd")
+expand_mode = 3
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact1/vbox/hbox"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme = SubResource("Theme_rlxar")
+text = "onlyth3best"
+vertical_alignment = 2
+
+[node name="description" type="Label" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact1/vbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_wrgkd")
+theme_override_font_sizes/font_size = 12
+text = " in life we are always learning"
+
+[node name="Contact2" type="Button" parent="Panel/VBoxContainer/ScrollContainer/contact_list"]
+custom_minimum_size = Vector2(165, 70)
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact2"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 0
+offset_right = 168.0
+offset_bottom = 61.0
+theme_override_constants/separation = 2
+
+[node name="hbox" type="HBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact2/vbox"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="pfp" type="TextureRect" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact2/vbox/hbox"]
+layout_mode = 2
+texture = ExtResource("5_rlxar")
+expand_mode = 3
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact2/vbox/hbox"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme = SubResource("Theme_rlxar")
+text = "paluuu_v"
+vertical_alignment = 2
+
+[node name="description" type="Label" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact2/vbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_wrgkd")
+theme_override_font_sizes/font_size = 12
+text = "purple is the BEST argue w/ the wall"
+
+[node name="Contact3" type="Button" parent="Panel/VBoxContainer/ScrollContainer/contact_list"]
+custom_minimum_size = Vector2(165, 70)
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact3"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 0
+offset_right = 168.0
+offset_bottom = 61.0
+theme_override_constants/separation = 2
+
+[node name="hbox" type="HBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact3/vbox"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="pfp" type="TextureRect" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact3/vbox/hbox"]
+layout_mode = 2
+texture = ExtResource("6_86b7h")
+expand_mode = 3
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact3/vbox/hbox"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme = SubResource("Theme_rlxar")
+text = "m6kj1rp"
+vertical_alignment = 2
+
+[node name="description" type="Label" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact3/vbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_wrgkd")
+theme_override_font_sizes/font_size = 12
+text = "not my real name :p"
+
+[node name="Contact4" type="Button" parent="Panel/VBoxContainer/ScrollContainer/contact_list"]
+custom_minimum_size = Vector2(165, 70)
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact4"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 0
+offset_right = 168.0
+offset_bottom = 61.0
+theme_override_constants/separation = -1
+
+[node name="hbox" type="HBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact4/vbox"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="pfp" type="TextureRect" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact4/vbox/hbox"]
+layout_mode = 2
+texture = ExtResource("7_1yhso")
+expand_mode = 3
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact4/vbox/hbox"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme = SubResource("Theme_rlxar")
+text = "ARCHIVISTS"
+vertical_alignment = 2
+
+[node name="description" type="Label" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact4/vbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_wrgkd")
+theme_override_font_sizes/font_size = 12
+text = "//your guide to the better place//
+~THE OTHERWORLD HELPBOT"
+
+[node name="Contact5" type="Button" parent="Panel/VBoxContainer/ScrollContainer/contact_list"]
+custom_minimum_size = Vector2(165, 70)
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact5"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 0
+offset_right = 168.0
+offset_bottom = 61.0
+theme_override_constants/separation = 2
+
+[node name="hbox" type="HBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact5/vbox"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="pfp" type="TextureRect" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact5/vbox/hbox"]
+layout_mode = 2
+expand_mode = 3
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact5/vbox/hbox"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme = SubResource("Theme_rlxar")
+text = "-"
+vertical_alignment = 2
+
+[node name="description" type="Label" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact5/vbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_wrgkd")
+theme_override_font_sizes/font_size = 12
+text = "-"
+
+[node name="Contact6" type="Button" parent="Panel/VBoxContainer/ScrollContainer/contact_list"]
+custom_minimum_size = Vector2(165, 70)
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact6"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 0
+offset_right = 168.0
+offset_bottom = 61.0
+theme_override_constants/separation = 2
+
+[node name="hbox" type="HBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact6/vbox"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="pfp" type="TextureRect" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact6/vbox/hbox"]
+layout_mode = 2
+expand_mode = 3
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact6/vbox/hbox"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme = SubResource("Theme_rlxar")
+text = "-"
+vertical_alignment = 2
+
+[node name="description" type="Label" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact6/vbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_wrgkd")
+theme_override_font_sizes/font_size = 12
+text = "-"
+
+[node name="Contact7" type="Button" parent="Panel/VBoxContainer/ScrollContainer/contact_list"]
+custom_minimum_size = Vector2(165, 70)
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact7"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 0
+offset_right = 168.0
+offset_bottom = 61.0
+theme_override_constants/separation = 2
+
+[node name="hbox" type="HBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact7/vbox"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="pfp" type="TextureRect" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact7/vbox/hbox"]
+layout_mode = 2
+expand_mode = 3
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact7/vbox/hbox"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme = SubResource("Theme_rlxar")
+text = "-"
+vertical_alignment = 2
+
+[node name="description" type="Label" parent="Panel/VBoxContainer/ScrollContainer/contact_list/Contact7/vbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_wrgkd")
+theme_override_font_sizes/font_size = 12
+text = "-"
+
+[node name="message_display" type="VBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/message_display"]
+custom_minimum_size = Vector2(0, 340)
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer/message_display/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxLine_wrgkd")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer/message_display/VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="RichTextLabel" parent="Panel/VBoxContainer/message_display/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_86b7h")
+theme_override_constants/line_separation = 10
+theme_override_constants/paragraph_separation = 10
+
+[node name="status" type="RichTextLabel" parent="Panel/VBoxContainer/message_display/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(185, 45)
+layout_mode = 2
+theme = SubResource("Theme_86b7h")
+theme_override_colors/default_color = Color(0.7941207, 0.7941206, 0.7941206, 1)
+theme_override_constants/line_separation = 10
+theme_override_constants/paragraph_separation = 10
+horizontal_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer/message_display/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 17
+
+[node name="content" type="RichTextLabel" parent="Panel/VBoxContainer/message_display/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_wrgkd")
+theme_override_constants/line_separation = 5
+theme_override_constants/paragraph_separation = 7
+bbcode_enabled = true
+text = "Welcome to MESSAGES~
+
+<- Click on the contacts displayed here to see chat history
+
+
+
+
+
+
+
+
+"
+vertical_alignment = 2
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/message_display"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_rlxar")
+
+[node name="choices" type="VBoxContainer" parent="Panel/VBoxContainer/message_display/Panel"]
+custom_minimum_size = Vector2(0, 65)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 349.0
+offset_bottom = 69.0
+
+[node name="Button1" type="Button" parent="Panel/VBoxContainer/message_display/Panel/choices"]
+layout_mode = 2
+theme = SubResource("Theme_1yhso")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_uxr7d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_86b7h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y8gak")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_86b7h")
+text = "*"
+
+[node name="Button2" type="Button" parent="Panel/VBoxContainer/message_display/Panel/choices"]
+layout_mode = 2
+theme = SubResource("Theme_1yhso")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_uxr7d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_86b7h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y8gak")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_86b7h")
+text = "–––––––"
+
+[node name="Button3" type="Button" parent="Panel/VBoxContainer/message_display/Panel/choices"]
+layout_mode = 2
+theme = SubResource("Theme_1yhso")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_uxr7d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_86b7h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y8gak")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_86b7h")
+text = "_______"
+
+[connection signal="close_requested" from="." to="." method="_on_messages_close_requested"]
+[connection signal="pressed" from="Panel/VBoxContainer/ScrollContainer/contact_list/Contact1" to="." method="_on_contact1_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/ScrollContainer/contact_list/Contact2" to="." method="_on_contact2_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/ScrollContainer/contact_list/Contact3" to="." method="_on_contact3_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/ScrollContainer/contact_list/Contact4" to="." method="_on_contact4_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/ScrollContainer/contact_list/Contact7" to="." method="_on_contact7_pressed"]

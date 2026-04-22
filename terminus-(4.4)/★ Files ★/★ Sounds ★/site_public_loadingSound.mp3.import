@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cg08cwn5aoox4"
+path="res://.godot/imported/site_public_loadingSound.mp3-53eefebd3872c03c6b988f18dac64c69.mp3str"
+
+[deps]
+
+source_file="res://★ Files ★/★ Sounds ★/site_public_loadingSound.mp3"
+dest_files=["res://.godot/imported/site_public_loadingSound.mp3-53eefebd3872c03c6b988f18dac64c69.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
