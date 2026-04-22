@@ -1,4 +1,5 @@
 This is a Godot project made for the Midnight hackathon by Hackclub!
+<br/> [22/04/2026: edit, I'm also submitting the new hours of this to Athena's Sleepover event!]
 
 The game is meant to simulate an OS, in the form of a mystery-horror story that unfolds as the player discovers more of the system.
 Features:
