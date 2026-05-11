@@ -8,6 +8,7 @@ Features:
 - another mysterious app that I won't spoil much about, but includes most of the input of the plot :)
 - OS UI with time, date and credits
 - lockscreen, guess the password!
+{n}
 
 (_One of the last apps is in development, so some functionality may not be available with the current version._)
 My hope is to have all the mechanics fully finished during future development as well as perhaps some easter eggs to add some spice to the game.
