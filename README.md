@@ -11,8 +11,8 @@ Features:
 <br/> {newer features/devlog!}
 - a better, more fun start screen with animations as well as noises (+ an about page, to be updated!)
 - work on the Archivists app, including:
--   bargains visible
--   more lore about the elusive entities
+  -   bargains visible
+  -   more lore about the elusive entities
 - a music player (not completely done yet, because of a mix between GH issues and working on other features)
 - started work on a call/keypad functionality, will update here once it's done!
 
