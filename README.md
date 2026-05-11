@@ -8,7 +8,13 @@ Features:
 - another mysterious app that I won't spoil much about, but includes most of the input of the plot :)
 - OS UI with time, date and credits
 - lockscreen, guess the password!
-{n}
+<br/> {newer features/devlog!}
+- a better, more fun start screen with animations as well as noises (+ an about page, to be updated!)
+- work on the Archivists app, including:
+-   bargains visible
+-   more lore about the elusive entities
+- a music player (not completely done yet, because of a mix between GH issues and working on other features)
+- started work on a call/keypad functionality, will update here once it's done!
 
 (_One of the last apps is in development, so some functionality may not be available with the current version._)
 My hope is to have all the mechanics fully finished during future development as well as perhaps some easter eggs to add some spice to the game.
