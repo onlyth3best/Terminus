@@ -8,9 +8,7 @@ Features:
 - another mysterious app that I won't spoil much about, but includes most of the input of the plot :)
 - OS UI with time, date and credits
 - lockscreen, guess the password!
-<br/>
-<br/>newer features/devlog!
-<br/>
+<br/> newer features/devlog!
 - a better, more fun start screen with animations as well as noises (+ an about page, to be updated!)
 - work on the Archivists app, including:
   -   bargains visible
