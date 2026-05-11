@@ -20,6 +20,8 @@ Features:
 My hope is to have all the mechanics fully finished during future development as well as perhaps some easter eggs to add some spice to the game.
 
 <img width="990" height="550" alt="Snímek obrazovky 2025-12-26 v 18 06 24" src="https://github.com/user-attachments/assets/bba6ee0f-345c-4ace-943d-52f55ecfb6e1" />
+<img width="1356" height="756" alt="Snímek obrazovky 2026-05-11 v 19 02 19" src="https://github.com/user-attachments/assets/b87973df-5bd5-4f4d-bc18-9cf99c816afc" />
+
 
 
 Where to play? Just here: [{link}](https://onlyth3best.itch.io/terminus)
